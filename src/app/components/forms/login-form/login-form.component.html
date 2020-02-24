@@ -1,17 +1,54 @@
 <div
+  id="login-form"
   nz-row
   nzType="flex"
-  nzJustify="middle"
-  nzAlign="center"
+  nzJustify="center"
+  nzAlign="middle"
   style="height: 100%;"
 >
-  <div nz-col nzSpan="12">
-    <div nz-row>
-      <div nz-col nzSpan="12">
-        <div class="box">1</div>
+  <div nz-col nzSm="23" nzXs="23" nzMd="12">
+    <div id="login" nz-row nzType="flex">
+      <div nz-col nzXs="24" nzMd="12">
+        <div
+          nx-row
+          nzType="flex"
+          nzAlign="center"
+          nzJustify="middle"
+          style="height: 100%; background-color: red;"
+        >
+          <div nz-col>
+            <div id="login-section" class="box">
+              <h4>login</h4>
+              <form nz-form nzLayout="inline">
+                <nz-form-item>
+                  <nz-form-control>
+                    <nz-input-group nzPrefixIcon="user">
+                      <input
+                        nz-input
+                        formControlname="userName"
+                        placeholder="username"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                  <nz-form-control>
+                    <nz-input-group nzPrefixIcon="lock">
+                      <input
+                        nz-input
+                        formControlname="password"
+                        placeholder="password"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div nz-col nzSpan="12">
-        <div class="box">2</div>
+      <div nz-col nzXs="24" nzMd="12">
+        <div id="description-section" class="box">Description</div>
       </div>
     </div>
   </div>

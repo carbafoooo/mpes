@@ -1,6 +1,8 @@
-.box {
-  min-height: 50%;
+#login-form {
+  height: 500px;
+  background-color: lightblue;
 }
-nz-row {
-  height: 100%;
+#login {
+  background-color: lightgreen;
+  height: 24rem;
 }
