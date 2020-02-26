@@ -8,39 +8,53 @@
 >
   <div nz-col nzSm="23" nzXs="23" nzMd="12">
     <div id="login" nz-row nzType="flex">
-      <div nz-col nzXs="24" nzMd="12">
+      <div nz-col nzXs="24" nzMd="12" style="height: 100%;">
         <div
-          nx-row
+          nz-row
           nzType="flex"
-          nzAlign="center"
-          nzJustify="middle"
-          style="height: 100%; background-color: red;"
+          nzAlign="middle"
+          nzJustify="center"
+          style="height: 100% ;"
         >
           <div nz-col>
             <div id="login-section" class="box">
-              <h4>login</h4>
-              <form nz-form nzLayout="inline">
-                <nz-form-item>
-                  <nz-form-control>
+              <form
+                nz-form
+                [formGroup]="loginForm"
+                (ngSubmit)="onSubmit(loginForm)"
+              >
+                <nz-form-item nzFlex>
+                  <nz-form-control nzSpan="24">
+                    <nz-form-text>dasd</nz-form-text>
                     <nz-input-group nzPrefixIcon="user">
                       <input
                         nz-input
-                        formControlname="userName"
+                        formControlName="userName"
                         placeholder="username"
                       />
                     </nz-input-group>
                   </nz-form-control>
                 </nz-form-item>
                 <nz-form-item>
-                  <nz-form-control>
+                  <nz-form-control nzSpan="24">
                     <nz-input-group nzPrefixIcon="lock">
                       <input
                         nz-input
-                        formControlname="password"
+                        type="password"
+                        formControlName="password"
                         placeholder="password"
                       />
                     </nz-input-group>
                   </nz-form-control>
+                  <button
+                    nzBlock
+                    class="login-form-button"
+                    nz-button
+                    nzType="primary"
+                    [disabled]="!loginForm.valid"
+                  >
+                    login
+                  </button>
                 </nz-form-item>
               </form>
             </div>

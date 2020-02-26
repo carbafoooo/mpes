@@ -2,11 +2,35 @@
   style="height: 100%;"
   nz-row
   nzType="flex"
-  nzGutter="8"
   nzAlign="middle"
   nzJustify="center"
 >
-  <div nz-col nzSpan="24">
-    <div class="box">box</div>
+  <div nz-col nzSpan="12">
+    <h4 nz-title>Registeration Form</h4>
+    <div class="box">
+      <div nz-row nzJustify="center">
+        <div nz-col>
+          <nz-input-group
+            nz-row
+            [nzPrefix]="user"
+            nzCompact
+            style="width: 40%; margin-right: 5px;"
+          >
+            <input type="text" nz-input placeholder="name" />
+            <ng-template #user>
+              <i nz-icon nzType="user"></i>
+            </ng-template>
+          </nz-input-group>
+          <nz-input-group
+            pr-sm
+            [nzPrefix]="user"
+            nzCompact
+            style="width: 50%; margin-right: 5px;"
+          >
+            <input type="text" nz-input placeholder="family" />
+          </nz-input-group>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
