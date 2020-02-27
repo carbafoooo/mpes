@@ -1,4 +1,4 @@
-<div
+<!-- <div
   style="height: 100%;"
   nz-row
   nzType="flex"
@@ -8,29 +8,37 @@
   <div nz-col nzSpan="12">
     <h4 nz-title>Registeration Form</h4>
     <div class="box">
-      <div nz-row nzJustify="center">
-        <div nz-col>
-          <nz-input-group
-            nz-row
-            [nzPrefix]="user"
-            nzCompact
-            style="width: 40%; margin-right: 5px;"
-          >
-            <input type="text" nz-input placeholder="name" />
-            <ng-template #user>
-              <i nz-icon nzType="user"></i>
-            </ng-template>
-          </nz-input-group>
-          <nz-input-group
-            pr-sm
-            [nzPrefix]="user"
-            nzCompact
-            style="width: 50%; margin-right: 5px;"
-          >
-            <input type="text" nz-input placeholder="family" />
-          </nz-input-group>
+      <form nz-form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div nz-row nzJustify="center" nzGutter="8">
+          <div formGroupName="user">
+            <nz-form-control nzRequired nzSpan="12" nzErrorTip="asd">
+              <nz-input-group nz-row [nzPrefix]="user" nzCompact>
+                <input
+                  type="text"
+                  formControlName="fname"
+                  nz-input
+                  placeholder="name"
+                />
+                <ng-template #user>
+                  <i nz-icon nzType="user"></i>
+                </ng-template>
+              </nz-input-group>
+            </nz-form-control>
+            <nz-form-control nzSpan="12">
+              <nz-input-group pr-sm [nzPrefix]="user" nzCompact>
+                <input
+                  type="text"
+                  formControlName="lname"
+                  nz-input
+                  placeholder="family"
+                />
+              </nz-input-group>
+            </nz-form-control>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
-</div>
+</div> -->
+
+<button class="btn btn-primary">click</button>

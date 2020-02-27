@@ -6,5 +6,5 @@ nz-row {
   border: 1px solid darkslategray;
   border-radius: 4px;
   min-height: 300px;
-  padding: 5px;
+  padding: 1rem;
 }

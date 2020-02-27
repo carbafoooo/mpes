@@ -1,10 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
-
+import 'bootstrap';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { NgZorroAntdModule, NZ_ICONS } from "ng-zorro-antd";
 import { IconDefinition } from "@ant-design/icons-angular";
 import { IconsModule } from "./icons/icons.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -15,6 +14,7 @@ import { RegisterLayoutComponent } from "./layout/register/register-layout.compo
 import { DashboardLayoutComponent } from "./layout/dashboard/dashboard-layout.component";
 import { RegisterFormComponent } from "./components/forms/register-form/register-form.component";
 import { LoginFormComponent } from "./components/forms/login-form/login-form.component";
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +23,12 @@ import { LoginFormComponent } from "./components/forms/login-form/login-form.com
     RegisterFormComponent,
     LoginLayoutComponent,
     LoginFormComponent,
-    RegisterLayoutComponent
+    RegisterLayoutComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgZorroAntdModule,
     IconsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule
