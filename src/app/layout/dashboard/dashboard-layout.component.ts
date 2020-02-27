@@ -6,7 +6,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./dashboard-layout.component.css"]
 })
 export class DashboardLayoutComponent implements OnInit {
+  active: Boolean
   constructor() {}
 
+
   ngOnInit() {}
+  onClick(){
+    this.active = !this.active
+    console.log(this.active)
+  }
 }

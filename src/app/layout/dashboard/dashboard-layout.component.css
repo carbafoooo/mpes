@@ -4,3 +4,7 @@
 nz-layout {
   height: 100vh;
 }
+.active {
+  transition: 1s all;
+  margin-right: -200px;
+}
