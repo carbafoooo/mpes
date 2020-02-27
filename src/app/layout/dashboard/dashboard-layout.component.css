@@ -1,10 +1,29 @@
 :host {
   text-align: center;
 }
-nz-layout {
-  height: 100vh;
+.sideNav {
+  overflow: hidden;
+  min-width: 250px;
 }
-.active {
-  transition: 1s all;
-  margin-right: -200px;
+
+#sideNav {
+  right: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 999;
+  transition: 0.3s all;
+  overflow: hidden;
+  margin-right: -250px;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#sideNav.active {
+  margin-right: 0px;
+}
+
+#main-content.active {
+  width: 250px;
+}
+#main-content {
+  transition: 0.3s all;
 }

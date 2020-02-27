@@ -1,36 +1,28 @@
 <app-header></app-header>
-<div class="container-fluid" style="background-color: aquamarine;">
-  <div class="row">
+<div class="container-fluid h-100" style="background-color: aquamarine;">
+  <div class="row h-100">
     <div
-      class="col-xl-auto"
+      id="sideNav"
+      class="col-auto"
       [ngClass]="{ active: active }"
       style="background-color: chartreuse;"
     >
       side panel of container
     </div>
-    <div class="col" style="background-color: cadetblue;">
+    <div
+      id="main-content"
+      class="col"
+      [ngClass]="{ active: active }"
+      style="background-color: cadetblue;"
+    >
       <button
         type="button"
         (click)="onClick()"
-        class="btn btn-primary float-right"
+        class="btn btn-primary float-right m-2"
       >
         Menu
       </button>
       Content
-    </div>
-  </div>
-</div>
-
-<div class="container ">
-  <div class="row mx-lg-n5">
-    <div class="col py-3 px-lg-5 mx-md-1 border bg-light">
-      Custom column padding
-    </div>
-    <div class="col py-3 px-lg-5 mx-md-1 border bg-light">
-      Custom column padding
-    </div>
-    <div class="col py-3 px-lg-5  mx-md-1 border bg-light">
-      Custom column padding
     </div>
   </div>
 </div>
