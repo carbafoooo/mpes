@@ -6,13 +6,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./dashboard-layout.component.css"]
 })
 export class DashboardLayoutComponent implements OnInit {
-  active: Boolean
+  active: Boolean;
+  menuActivated: Boolean = true;
+  isCollapsed: Boolean;
   constructor() {}
 
-
   ngOnInit() {}
-  onClick(){
-    this.active = !this.active
-    console.log(this.active)
+  onClick() {
+    this.active = !this.active;
+    console.log(this.active);
+  }
+
+  onToggleMenu() {
+    this.menuActivated = !this.menuActivated;
   }
 }

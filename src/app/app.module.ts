@@ -1,10 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
-import 'bootstrap';
+import "bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { IconDefinition } from "@ant-design/icons-angular";
 import { IconsModule } from "./icons/icons.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -14,7 +13,8 @@ import { RegisterLayoutComponent } from "./layout/register/register-layout.compo
 import { DashboardLayoutComponent } from "./layout/dashboard/dashboard-layout.component";
 import { RegisterFormComponent } from "./components/forms/register-form/register-form.component";
 import { LoginFormComponent } from "./components/forms/login-form/login-form.component";
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from "./components/header/header.component";
+import { SideBarComponent } from "./components/side-bar/side-bar.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { HeaderComponent } from './components/header/header.component';
     LoginLayoutComponent,
     LoginFormComponent,
     RegisterLayoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
