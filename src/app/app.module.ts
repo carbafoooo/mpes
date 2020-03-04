@@ -15,6 +15,7 @@ import { RegisterFormComponent } from "./components/forms/register-form/register
 import { LoginFormComponent } from "./components/forms/login-form/login-form.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SideBarComponent } from "./components/side-bar/side-bar.component";
+import { DashBoardService } from './layout/dashboard/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { SideBarComponent } from "./components/side-bar/side-bar.component";
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [DashBoardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

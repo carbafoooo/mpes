@@ -1,118 +1,5 @@
-<!-- <app-header></app-header>
-<div class="container-fluid h-100" style="background-color: aquamarine;">
-  <div class="row h-100">
-    <div
-      id="sideNav"
-      class="col-auto"
-      [ngClass]="{ active: active }"
-      style="background-color: chartreuse;"
-    >
-      side panel of container
-    </div>
-    <div
-      id="main-content"
-      class="col"
-      [ngClass]="{ active: active }"
-      style="background-color: cadetblue;"
-    >
-      <button
-        type="button"
-        (click)="onClick()"
-        class="btn btn-primary float-right m-2"
-      >
-        Menu
-      </button>
-      Content
-    </div>
-  </div>
-</div> -->
-
 <div class="wrapper">
-  <nav id="sidebar" [ngClass]="{ active: menuActivated }">
-    <div class="sidebar-header">
-      <h3>Header</h3>
-      <strong>H</strong>
-    </div>
-
-    <ul class="list-unstyled components">
-      <li>
-        <a
-          href="#homeSubmenu"
-          data-toggle="collapse"
-          (click)="isCollapsed = !isCollapsed"
-          aria-expanded="false"
-          class="dropdown-toggle"
-        >
-          Home
-          <fa name="home"></fa>
-        </a>
-        <ul class=" list-unstyled" id="homeSubmenu">
-          <li>
-            <a href="#">Home 1</a>
-          </li>
-          <li>
-            <a href="#">Home 2</a>
-          </li>
-          <li>
-            <a href="#">Home 3</a>
-          </li>
-        </ul>
-      </li>
-      <li class="active">
-        <a href="#">
-          <i class="fas fa-briefcase"></i>
-          About
-        </a>
-        <a
-          href="#pageSubmenu"
-          data-toggle="collapse"
-          aria-expanded="false"
-          class="dropdown-toggle"
-        >
-          <i class="fas fa-copy"></i>
-          Pages
-        </a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li>
-            <a href="#">Page 1</a>
-          </li>
-          <li>
-            <a href="#">Page 2</a>
-          </li>
-          <li>
-            <a href="#">Page 3</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fas fa-image"></i>
-          Portfolio
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fas fa-question"></i>
-          FAQ
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fas fa-paper-plane"></i>
-          Contact
-        </a>
-      </li>
-    </ul>
-
-    <ul class="list-unstyled CTAs">
-      <li>
-        <a class="download">Download source</a>
-      </li>
-      <li>
-        <a href="" class="article">Back to article</a>
-      </li>
-    </ul>
-  </nav>
+  <app-side-bar [isCollapse]="isCollapse"></app-side-bar>
 
   <!-- Page Content  -->
   <div id="content">
@@ -122,7 +9,7 @@
           type="button"
           id="sidebarCollapse"
           class="btn btn-info"
-          (click)="onToggleMenu()"
+          (click)="isCollapse = !isCollapse"
         >
           <i class="fas fa-align-left"></i>
           <span>Toggle Sidebar</span>
